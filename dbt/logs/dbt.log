@@ -3057,3 +3057,605 @@ order by
 [0m00:27:39.973085 [debug] [MainThread]: Command `dbt run` succeeded at 00:27:39.972950 after 5.36 seconds
 [0m00:27:39.973440 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78d12de2d330>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78d12baf24d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78d12a257220>]}
 [0m00:27:39.973846 [debug] [MainThread]: Flushing usage events
+[0m02:01:22.376270 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d35e1fd1e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d35bf1a440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d35bf1a3e0>]}
+
+
+============================== 02:01:22.424543 | eb83e399-f25d-48ed-8335-f2514ede1a70 ==============================
+[0m02:01:22.424543 [info ] [MainThread]: Running with dbt=1.7.0
+[0m02:01:22.425739 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/usr/app/dbt/logs', 'profiles_dir': '/usr/app/dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt run --project-dir /usr/app/dbt --profiles-dir /usr/app/dbt --select staging.stg_steam_games+', 'send_anonymous_usage_stats': 'True'}
+[0m02:01:23.893973 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'eb83e399-f25d-48ed-8335-f2514ede1a70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d35bf5ca60>]}
+[0m02:01:24.001813 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'eb83e399-f25d-48ed-8335-f2514ede1a70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d35a3f9990>]}
+[0m02:01:24.002764 [info ] [MainThread]: Registered adapter: bigquery=1.7.0
+[0m02:01:24.016850 [debug] [MainThread]: checksum: 8434eacd4ffdf0ca3ab22bf0e2d55b45306c9599613e842b959405abc489e606, vars: {}, profile: , target: , version: 1.7.0
+[0m02:01:24.077862 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m02:01:24.078330 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m02:01:24.083688 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'eb83e399-f25d-48ed-8335-f2514ede1a70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d35a2540d0>]}
+[0m02:01:24.093442 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'eb83e399-f25d-48ed-8335-f2514ede1a70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d35a225090>]}
+[0m02:01:24.093885 [info ] [MainThread]: Found 10 tests, 3 models, 1 source, 0 exposures, 0 metrics, 447 macros, 0 groups, 0 semantic models
+[0m02:01:24.094316 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'eb83e399-f25d-48ed-8335-f2514ede1a70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d35a224f40>]}
+[0m02:01:24.095951 [info ] [MainThread]: 
+[0m02:01:24.096839 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m02:01:24.098010 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_steam-dashboard-project'
+[0m02:01:24.098539 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m02:01:24.474002 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_steam-dashboard-project, now list_steam-dashboard-project_steam_warehouse_steam_warehouse)
+[0m02:01:24.474607 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m02:01:24.826024 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'eb83e399-f25d-48ed-8335-f2514ede1a70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d35a224670>]}
+[0m02:01:24.827184 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m02:01:24.827739 [info ] [MainThread]: 
+[0m02:01:24.838184 [debug] [Thread-1 (]: Began running node model.steam_pipeline.stg_steam_games
+[0m02:01:24.839035 [info ] [Thread-1 (]: 1 of 3 START sql view model steam_warehouse_steam_warehouse.stg_steam_games .... [RUN]
+[0m02:01:24.840249 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_steam-dashboard-project_steam_warehouse_steam_warehouse, now model.steam_pipeline.stg_steam_games)
+[0m02:01:24.841034 [debug] [Thread-1 (]: Began compiling node model.steam_pipeline.stg_steam_games
+[0m02:01:24.849962 [debug] [Thread-1 (]: Writing injected SQL for node "model.steam_pipeline.stg_steam_games"
+[0m02:01:24.850706 [debug] [Thread-1 (]: Timing info for model.steam_pipeline.stg_steam_games (compile): 02:01:24.841428 => 02:01:24.850455
+[0m02:01:24.851069 [debug] [Thread-1 (]: Began executing node model.steam_pipeline.stg_steam_games
+[0m02:01:24.876694 [debug] [Thread-1 (]: Writing runtime sql for node "model.steam_pipeline.stg_steam_games"
+[0m02:01:24.877435 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:01:24.878879 [debug] [Thread-1 (]: On model.steam_pipeline.stg_steam_games: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "steam_pipeline", "target_name": "dev", "node_id": "model.steam_pipeline.stg_steam_games"} */
+
+
+  create or replace view `steam-dashboard-project`.`steam_warehouse_steam_warehouse`.`stg_steam_games`
+  OPTIONS()
+  as -- Staging view: typed, renamed columns on top of raw_games.
+-- No filters needed — Spark already enforced data quality at ingestion.
+
+
+
+select
+    app_id,
+    name                                        as game_name,
+    release_date,
+    release_year,
+    price,
+    price_tier,
+    metacritic_score,
+    peak_ccu,
+    dlc_count,
+    owners_lower,
+    windows,
+    mac,
+    linux,
+    genres,
+    developers,
+    publishers
+
+from `steam-dashboard-project`.`steam_warehouse`.`raw_games`;
+
+
+[0m02:01:26.069381 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-dashboard-project&j=bq:US:67c29208-9dd5-4e9a-a62d-de46ce63ebf5&page=queryresults
+[0m02:01:26.560185 [debug] [Thread-1 (]: Timing info for model.steam_pipeline.stg_steam_games (execute): 02:01:24.851286 => 02:01:26.559977
+[0m02:01:26.561027 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'eb83e399-f25d-48ed-8335-f2514ede1a70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d35a2c9840>]}
+[0m02:01:26.561689 [info ] [Thread-1 (]: 1 of 3 OK created sql view model steam_warehouse_steam_warehouse.stg_steam_games  [[32mCREATE VIEW (0 processed)[0m in 1.72s]
+[0m02:01:26.562383 [debug] [Thread-1 (]: Finished running node model.steam_pipeline.stg_steam_games
+[0m02:01:26.563422 [debug] [Thread-3 (]: Began running node model.steam_pipeline.metacritic_by_genre
+[0m02:01:26.563908 [debug] [Thread-4 (]: Began running node model.steam_pipeline.releases_by_year_and_tier
+[0m02:01:26.564326 [info ] [Thread-3 (]: 2 of 3 START sql table model steam_warehouse_steam_warehouse.metacritic_by_genre  [RUN]
+[0m02:01:26.564964 [info ] [Thread-4 (]: 3 of 3 START sql table model steam_warehouse_steam_warehouse.releases_by_year_and_tier  [RUN]
+[0m02:01:26.566071 [debug] [Thread-3 (]: Acquiring new bigquery connection 'model.steam_pipeline.metacritic_by_genre'
+[0m02:01:26.566816 [debug] [Thread-4 (]: Acquiring new bigquery connection 'model.steam_pipeline.releases_by_year_and_tier'
+[0m02:01:26.567228 [debug] [Thread-3 (]: Began compiling node model.steam_pipeline.metacritic_by_genre
+[0m02:01:26.567640 [debug] [Thread-4 (]: Began compiling node model.steam_pipeline.releases_by_year_and_tier
+[0m02:01:26.570930 [debug] [Thread-3 (]: Writing injected SQL for node "model.steam_pipeline.metacritic_by_genre"
+[0m02:01:26.573974 [debug] [Thread-4 (]: Writing injected SQL for node "model.steam_pipeline.releases_by_year_and_tier"
+[0m02:01:26.574800 [debug] [Thread-4 (]: Timing info for model.steam_pipeline.releases_by_year_and_tier (compile): 02:01:26.571197 => 02:01:26.574536
+[0m02:01:26.575233 [debug] [Thread-4 (]: Began executing node model.steam_pipeline.releases_by_year_and_tier
+[0m02:01:26.580883 [debug] [Thread-3 (]: Timing info for model.steam_pipeline.metacritic_by_genre (compile): 02:01:26.568161 => 02:01:26.580651
+[0m02:01:26.585438 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m02:01:26.585826 [debug] [Thread-3 (]: Began executing node model.steam_pipeline.metacritic_by_genre
+[0m02:01:26.588128 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m02:01:27.017096 [debug] [Thread-4 (]: Writing runtime sql for node "model.steam_pipeline.releases_by_year_and_tier"
+[0m02:01:27.023148 [debug] [Thread-3 (]: Writing runtime sql for node "model.steam_pipeline.metacritic_by_genre"
+[0m02:01:27.024707 [debug] [Thread-4 (]: On model.steam_pipeline.releases_by_year_and_tier: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "steam_pipeline", "target_name": "dev", "node_id": "model.steam_pipeline.releases_by_year_and_tier"} */
+
+  
+    
+
+    create or replace table `steam-dashboard-project`.`steam_warehouse_steam_warehouse`.`releases_by_year_and_tier`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      -- Dashboard Tile 2: Number of games released per year, broken down by price tier
+-- Used for a stacked bar chart in Looker Studio.
+-- Price tiers: Free / Budget (<$10) / Mid ($10–$29) / Premium ($30+)
+
+
+
+select
+    release_year,
+    date(release_year, 1, 1)    as release_date,
+    price_tier,
+    count(*)        as game_count
+
+from `steam-dashboard-project`.`steam_warehouse_steam_warehouse`.`stg_steam_games`
+
+where
+    -- release_year between 2005 and 2024
+    release_year >= 1970
+    and price_tier is not null
+
+group by
+    release_year,
+    price_tier
+
+order by
+    release_year,
+    price_tier
+    );
+  
+[0m02:01:27.026223 [debug] [Thread-3 (]: On model.steam_pipeline.metacritic_by_genre: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "steam_pipeline", "target_name": "dev", "node_id": "model.steam_pipeline.metacritic_by_genre"} */
+
+  
+    
+
+    create or replace table `steam-dashboard-project`.`steam_warehouse_steam_warehouse`.`metacritic_by_genre`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      -- Dashboard Tile 1: Average Metacritic score by genre
+-- Explodes the genres array so each game-genre pair becomes a row,
+-- then aggregates. Only genres with ≥20 rated games are included
+-- to avoid small-sample noise.
+
+
+
+with exploded as (
+
+    select
+        app_id,
+        game_name,
+        metacritic_score,
+        genre.element as genre
+
+    from `steam-dashboard-project`.`steam_warehouse_steam_warehouse`.`stg_steam_games`,
+    unnest(genres.list) as genre
+
+    where
+        metacritic_score > 0
+        and genres is not null
+
+)
+
+select
+    genre,
+    round(avg(metacritic_score), 1)  as avg_metacritic_score,
+    count(*)                          as rated_game_count,
+    min(metacritic_score)             as min_score,
+    max(metacritic_score)             as max_score
+
+from exploded
+group by genre
+having count(*) >= 20
+order by avg_metacritic_score desc
+    );
+  
+[0m02:01:27.627175 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-dashboard-project&j=bq:US:e5acabac-ab6e-4398-a9c9-7fbf7f2971c4&page=queryresults
+[0m02:01:27.686432 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-dashboard-project&j=bq:US:861f8a41-abbf-4e7d-83ef-e68ca2f8623b&page=queryresults
+[0m02:01:29.779791 [debug] [Thread-4 (]: Timing info for model.steam_pipeline.releases_by_year_and_tier (execute): 02:01:26.575494 => 02:01:29.779584
+[0m02:01:29.780614 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'eb83e399-f25d-48ed-8335-f2514ede1a70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d35a0fbd30>]}
+[0m02:01:29.781276 [info ] [Thread-4 (]: 3 of 3 OK created sql table model steam_warehouse_steam_warehouse.releases_by_year_and_tier  [[32mCREATE TABLE (90.0 rows, 1.8 MiB processed)[0m in 3.21s]
+[0m02:01:29.782050 [debug] [Thread-4 (]: Finished running node model.steam_pipeline.releases_by_year_and_tier
+[0m02:01:30.046272 [debug] [Thread-3 (]: Timing info for model.steam_pipeline.metacritic_by_genre (execute): 02:01:26.586206 => 02:01:30.046024
+[0m02:01:30.047211 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'eb83e399-f25d-48ed-8335-f2514ede1a70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d35a0faa70>]}
+[0m02:01:30.047840 [info ] [Thread-3 (]: 2 of 3 OK created sql table model steam_warehouse_steam_warehouse.metacritic_by_genre  [[32mCREATE TABLE (11.0 rows, 3.8 MiB processed)[0m in 3.48s]
+[0m02:01:30.048564 [debug] [Thread-3 (]: Finished running node model.steam_pipeline.metacritic_by_genre
+[0m02:01:30.050415 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m02:01:30.050750 [debug] [MainThread]: Connection 'model.steam_pipeline.stg_steam_games' was properly closed.
+[0m02:01:30.051025 [debug] [MainThread]: Connection 'model.steam_pipeline.metacritic_by_genre' was properly closed.
+[0m02:01:30.051277 [debug] [MainThread]: Connection 'model.steam_pipeline.releases_by_year_and_tier' was properly closed.
+[0m02:01:30.051605 [info ] [MainThread]: 
+[0m02:01:30.051948 [info ] [MainThread]: Finished running 1 view model, 2 table models in 0 hours 0 minutes and 5.96 seconds (5.96s).
+[0m02:01:30.053274 [debug] [MainThread]: Command end result
+[0m02:01:30.068644 [info ] [MainThread]: 
+[0m02:01:30.069162 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m02:01:30.069625 [info ] [MainThread]: 
+[0m02:01:30.070102 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m02:01:30.072628 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 7.7780004, "process_user_time": 3.022955, "process_kernel_time": 0.307893, "process_mem_max_rss": "136180", "process_in_blocks": "118048", "process_out_blocks": "2712"}
+[0m02:01:30.073195 [debug] [MainThread]: Command `dbt run` succeeded at 02:01:30.073069 after 7.78 seconds
+[0m02:01:30.073583 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d35e1fd1e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d35be89450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d35a5056c0>]}
+[0m02:01:30.073975 [debug] [MainThread]: Flushing usage events
+[0m02:01:34.603574 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7db9c0d591e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7db9bea82440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7db9bea823e0>]}
+
+
+============================== 02:01:34.609518 | fceb6e65-872c-4cf5-a205-df33a81d09e3 ==============================
+[0m02:01:34.609518 [info ] [MainThread]: Running with dbt=1.7.0
+[0m02:01:34.610125 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/usr/app/dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/usr/app/dbt/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt test --project-dir /usr/app/dbt --profiles-dir /usr/app/dbt', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m02:01:35.072429 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'fceb6e65-872c-4cf5-a205-df33a81d09e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7db9be9f3b20>]}
+[0m02:01:35.164583 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'fceb6e65-872c-4cf5-a205-df33a81d09e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7db9bea35960>]}
+[0m02:01:35.165582 [info ] [MainThread]: Registered adapter: bigquery=1.7.0
+[0m02:01:35.173426 [debug] [MainThread]: checksum: 8434eacd4ffdf0ca3ab22bf0e2d55b45306c9599613e842b959405abc489e606, vars: {}, profile: , target: , version: 1.7.0
+[0m02:01:35.197189 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m02:01:35.197613 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m02:01:35.204609 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'fceb6e65-872c-4cf5-a205-df33a81d09e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7db9bcdd40d0>]}
+[0m02:01:35.213922 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'fceb6e65-872c-4cf5-a205-df33a81d09e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7db9bcda1420>]}
+[0m02:01:35.214399 [info ] [MainThread]: Found 10 tests, 3 models, 1 source, 0 exposures, 0 metrics, 447 macros, 0 groups, 0 semantic models
+[0m02:01:35.214806 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fceb6e65-872c-4cf5-a205-df33a81d09e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7db9bcda13f0>]}
+[0m02:01:35.216859 [info ] [MainThread]: 
+[0m02:01:35.217776 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m02:01:35.219018 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_steam-dashboard-project_steam_warehouse_steam_warehouse'
+[0m02:01:35.219398 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m02:01:35.555113 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fceb6e65-872c-4cf5-a205-df33a81d09e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7db9bcda1000>]}
+[0m02:01:35.556011 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m02:01:35.556523 [info ] [MainThread]: 
+[0m02:01:35.563741 [debug] [Thread-1 (]: Began running node test.steam_pipeline.accepted_values_releases_by_year_and_tier_price_tier__Free__Budget__Mid__Premium.4faed1990e
+[0m02:01:35.564142 [debug] [Thread-2 (]: Began running node test.steam_pipeline.not_null_metacritic_by_genre_avg_metacritic_score.4c56331ff3
+[0m02:01:35.564472 [debug] [Thread-3 (]: Began running node test.steam_pipeline.not_null_metacritic_by_genre_genre.2ceea1b05c
+[0m02:01:35.564914 [debug] [Thread-4 (]: Began running node test.steam_pipeline.not_null_releases_by_year_and_tier_game_count.d005e0513b
+[0m02:01:35.565263 [info ] [Thread-1 (]: 1 of 10 START test accepted_values_releases_by_year_and_tier_price_tier__Free__Budget__Mid__Premium  [RUN]
+[0m02:01:35.565855 [info ] [Thread-2 (]: 2 of 10 START test not_null_metacritic_by_genre_avg_metacritic_score ........... [RUN]
+[0m02:01:35.567958 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_steam-dashboard-project_steam_warehouse_steam_warehouse, now test.steam_pipeline.accepted_values_releases_by_year_and_tier_price_tier__Free__Budget__Mid__Premium.4faed1990e)
+[0m02:01:35.566414 [info ] [Thread-3 (]: 3 of 10 START test not_null_metacritic_by_genre_genre .......................... [RUN]
+[0m02:01:35.569073 [debug] [Thread-2 (]: Acquiring new bigquery connection 'test.steam_pipeline.not_null_metacritic_by_genre_avg_metacritic_score.4c56331ff3'
+[0m02:01:35.566916 [info ] [Thread-4 (]: 4 of 10 START test not_null_releases_by_year_and_tier_game_count ............... [RUN]
+[0m02:01:35.569579 [debug] [Thread-1 (]: Began compiling node test.steam_pipeline.accepted_values_releases_by_year_and_tier_price_tier__Free__Budget__Mid__Premium.4faed1990e
+[0m02:01:35.570301 [debug] [Thread-3 (]: Acquiring new bigquery connection 'test.steam_pipeline.not_null_metacritic_by_genre_genre.2ceea1b05c'
+[0m02:01:35.570709 [debug] [Thread-2 (]: Began compiling node test.steam_pipeline.not_null_metacritic_by_genre_avg_metacritic_score.4c56331ff3
+[0m02:01:35.571421 [debug] [Thread-4 (]: Acquiring new bigquery connection 'test.steam_pipeline.not_null_releases_by_year_and_tier_game_count.d005e0513b'
+[0m02:01:35.588388 [debug] [Thread-1 (]: Writing injected SQL for node "test.steam_pipeline.accepted_values_releases_by_year_and_tier_price_tier__Free__Budget__Mid__Premium.4faed1990e"
+[0m02:01:35.588841 [debug] [Thread-3 (]: Began compiling node test.steam_pipeline.not_null_metacritic_by_genre_genre.2ceea1b05c
+[0m02:01:35.597061 [debug] [Thread-2 (]: Writing injected SQL for node "test.steam_pipeline.not_null_metacritic_by_genre_avg_metacritic_score.4c56331ff3"
+[0m02:01:35.597653 [debug] [Thread-4 (]: Began compiling node test.steam_pipeline.not_null_releases_by_year_and_tier_game_count.d005e0513b
+[0m02:01:35.604695 [debug] [Thread-3 (]: Writing injected SQL for node "test.steam_pipeline.not_null_metacritic_by_genre_genre.2ceea1b05c"
+[0m02:01:35.605381 [debug] [Thread-1 (]: Timing info for test.steam_pipeline.accepted_values_releases_by_year_and_tier_price_tier__Free__Budget__Mid__Premium.4faed1990e (compile): 02:01:35.571741 => 02:01:35.605049
+[0m02:01:35.609446 [debug] [Thread-4 (]: Writing injected SQL for node "test.steam_pipeline.not_null_releases_by_year_and_tier_game_count.d005e0513b"
+[0m02:01:35.609977 [debug] [Thread-2 (]: Timing info for test.steam_pipeline.not_null_metacritic_by_genre_avg_metacritic_score.4c56331ff3 (compile): 02:01:35.589125 => 02:01:35.609746
+[0m02:01:35.610561 [debug] [Thread-1 (]: Began executing node test.steam_pipeline.accepted_values_releases_by_year_and_tier_price_tier__Free__Budget__Mid__Premium.4faed1990e
+[0m02:01:35.611254 [debug] [Thread-3 (]: Timing info for test.steam_pipeline.not_null_metacritic_by_genre_genre.2ceea1b05c (compile): 02:01:35.598119 => 02:01:35.610974
+[0m02:01:35.611719 [debug] [Thread-2 (]: Began executing node test.steam_pipeline.not_null_metacritic_by_genre_avg_metacritic_score.4c56331ff3
+[0m02:01:35.612211 [debug] [Thread-4 (]: Timing info for test.steam_pipeline.not_null_releases_by_year_and_tier_game_count.d005e0513b (compile): 02:01:35.605745 => 02:01:35.611985
+[0m02:01:35.629360 [debug] [Thread-1 (]: Writing runtime sql for node "test.steam_pipeline.accepted_values_releases_by_year_and_tier_price_tier__Free__Budget__Mid__Premium.4faed1990e"
+[0m02:01:35.629841 [debug] [Thread-3 (]: Began executing node test.steam_pipeline.not_null_metacritic_by_genre_genre.2ceea1b05c
+[0m02:01:35.632319 [debug] [Thread-2 (]: Writing runtime sql for node "test.steam_pipeline.not_null_metacritic_by_genre_avg_metacritic_score.4c56331ff3"
+[0m02:01:35.632820 [debug] [Thread-4 (]: Began executing node test.steam_pipeline.not_null_releases_by_year_and_tier_game_count.d005e0513b
+[0m02:01:35.635365 [debug] [Thread-3 (]: Writing runtime sql for node "test.steam_pipeline.not_null_metacritic_by_genre_genre.2ceea1b05c"
+[0m02:01:35.637852 [debug] [Thread-4 (]: Writing runtime sql for node "test.steam_pipeline.not_null_releases_by_year_and_tier_game_count.d005e0513b"
+[0m02:01:35.638266 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m02:01:35.638635 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:01:35.639444 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m02:01:35.639869 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m02:01:35.641291 [debug] [Thread-2 (]: On test.steam_pipeline.not_null_metacritic_by_genre_avg_metacritic_score.4c56331ff3: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "steam_pipeline", "target_name": "dev", "node_id": "test.steam_pipeline.not_null_metacritic_by_genre_avg_metacritic_score.4c56331ff3"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select avg_metacritic_score
+from `steam-dashboard-project`.`steam_warehouse_steam_warehouse`.`metacritic_by_genre`
+where avg_metacritic_score is null
+
+
+
+      
+    ) dbt_internal_test
+[0m02:01:35.642850 [debug] [Thread-1 (]: On test.steam_pipeline.accepted_values_releases_by_year_and_tier_price_tier__Free__Budget__Mid__Premium.4faed1990e: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "steam_pipeline", "target_name": "dev", "node_id": "test.steam_pipeline.accepted_values_releases_by_year_and_tier_price_tier__Free__Budget__Mid__Premium.4faed1990e"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        price_tier as value_field,
+        count(*) as n_records
+
+    from `steam-dashboard-project`.`steam_warehouse_steam_warehouse`.`releases_by_year_and_tier`
+    group by price_tier
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'Free','Budget','Mid','Premium'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m02:01:35.644131 [debug] [Thread-3 (]: On test.steam_pipeline.not_null_metacritic_by_genre_genre.2ceea1b05c: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "steam_pipeline", "target_name": "dev", "node_id": "test.steam_pipeline.not_null_metacritic_by_genre_genre.2ceea1b05c"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select genre
+from `steam-dashboard-project`.`steam_warehouse_steam_warehouse`.`metacritic_by_genre`
+where genre is null
+
+
+
+      
+    ) dbt_internal_test
+[0m02:01:35.645315 [debug] [Thread-4 (]: On test.steam_pipeline.not_null_releases_by_year_and_tier_game_count.d005e0513b: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "steam_pipeline", "target_name": "dev", "node_id": "test.steam_pipeline.not_null_releases_by_year_and_tier_game_count.d005e0513b"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select game_count
+from `steam-dashboard-project`.`steam_warehouse_steam_warehouse`.`releases_by_year_and_tier`
+where game_count is null
+
+
+
+      
+    ) dbt_internal_test
+[0m02:01:36.406339 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-dashboard-project&j=bq:US:bc84ab9c-ee3a-4c81-9d36-ff178f03cbff&page=queryresults
+[0m02:01:36.431051 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-dashboard-project&j=bq:US:9b650db5-8ec1-422c-918d-1dc630f58bf4&page=queryresults
+[0m02:01:37.065135 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-dashboard-project&j=bq:US:697b76c7-d16c-4b36-b8eb-03154c30e146&page=queryresults
+[0m02:01:37.178217 [debug] [Thread-3 (]: Timing info for test.steam_pipeline.not_null_metacritic_by_genre_genre.2ceea1b05c (execute): 02:01:35.633220 => 02:01:37.177760
+[0m02:01:37.179735 [info ] [Thread-3 (]: 3 of 10 PASS not_null_metacritic_by_genre_genre ................................ [[32mPASS[0m in 1.61s]
+[0m02:01:37.180886 [debug] [Thread-3 (]: Finished running node test.steam_pipeline.not_null_metacritic_by_genre_genre.2ceea1b05c
+[0m02:01:37.182351 [debug] [Thread-3 (]: Began running node test.steam_pipeline.not_null_releases_by_year_and_tier_price_tier.c9237483ff
+[0m02:01:37.183140 [info ] [Thread-3 (]: 5 of 10 START test not_null_releases_by_year_and_tier_price_tier ............... [RUN]
+[0m02:01:37.184895 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.steam_pipeline.not_null_metacritic_by_genre_genre.2ceea1b05c, now test.steam_pipeline.not_null_releases_by_year_and_tier_price_tier.c9237483ff)
+[0m02:01:37.185638 [debug] [Thread-3 (]: Began compiling node test.steam_pipeline.not_null_releases_by_year_and_tier_price_tier.c9237483ff
+[0m02:01:37.194335 [debug] [Thread-3 (]: Writing injected SQL for node "test.steam_pipeline.not_null_releases_by_year_and_tier_price_tier.c9237483ff"
+[0m02:01:37.195257 [debug] [Thread-3 (]: Timing info for test.steam_pipeline.not_null_releases_by_year_and_tier_price_tier.c9237483ff (compile): 02:01:37.186101 => 02:01:37.195008
+[0m02:01:37.195665 [debug] [Thread-3 (]: Began executing node test.steam_pipeline.not_null_releases_by_year_and_tier_price_tier.c9237483ff
+[0m02:01:37.198504 [debug] [Thread-3 (]: Writing runtime sql for node "test.steam_pipeline.not_null_releases_by_year_and_tier_price_tier.c9237483ff"
+[0m02:01:37.199336 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m02:01:37.201573 [debug] [Thread-3 (]: On test.steam_pipeline.not_null_releases_by_year_and_tier_price_tier.c9237483ff: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "steam_pipeline", "target_name": "dev", "node_id": "test.steam_pipeline.not_null_releases_by_year_and_tier_price_tier.c9237483ff"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select price_tier
+from `steam-dashboard-project`.`steam_warehouse_steam_warehouse`.`releases_by_year_and_tier`
+where price_tier is null
+
+
+
+      
+    ) dbt_internal_test
+[0m02:01:37.236800 [debug] [Thread-4 (]: Timing info for test.steam_pipeline.not_null_releases_by_year_and_tier_game_count.d005e0513b (execute): 02:01:35.635945 => 02:01:37.236464
+[0m02:01:37.238066 [info ] [Thread-4 (]: 4 of 10 PASS not_null_releases_by_year_and_tier_game_count ..................... [[32mPASS[0m in 1.67s]
+[0m02:01:37.238872 [debug] [Thread-4 (]: Finished running node test.steam_pipeline.not_null_releases_by_year_and_tier_game_count.d005e0513b
+[0m02:01:37.239462 [debug] [Thread-4 (]: Began running node test.steam_pipeline.not_null_releases_by_year_and_tier_release_year.54e040d0a3
+[0m02:01:37.239974 [info ] [Thread-4 (]: 6 of 10 START test not_null_releases_by_year_and_tier_release_year ............. [RUN]
+[0m02:01:37.240891 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.steam_pipeline.not_null_releases_by_year_and_tier_game_count.d005e0513b, now test.steam_pipeline.not_null_releases_by_year_and_tier_release_year.54e040d0a3)
+[0m02:01:37.241299 [debug] [Thread-4 (]: Began compiling node test.steam_pipeline.not_null_releases_by_year_and_tier_release_year.54e040d0a3
+[0m02:01:37.245893 [debug] [Thread-4 (]: Writing injected SQL for node "test.steam_pipeline.not_null_releases_by_year_and_tier_release_year.54e040d0a3"
+[0m02:01:37.247216 [debug] [Thread-4 (]: Timing info for test.steam_pipeline.not_null_releases_by_year_and_tier_release_year.54e040d0a3 (compile): 02:01:37.241721 => 02:01:37.246884
+[0m02:01:37.247853 [debug] [Thread-4 (]: Began executing node test.steam_pipeline.not_null_releases_by_year_and_tier_release_year.54e040d0a3
+[0m02:01:37.251634 [debug] [Thread-4 (]: Writing runtime sql for node "test.steam_pipeline.not_null_releases_by_year_and_tier_release_year.54e040d0a3"
+[0m02:01:37.252734 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m02:01:37.254971 [debug] [Thread-4 (]: On test.steam_pipeline.not_null_releases_by_year_and_tier_release_year.54e040d0a3: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "steam_pipeline", "target_name": "dev", "node_id": "test.steam_pipeline.not_null_releases_by_year_and_tier_release_year.54e040d0a3"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select release_year
+from `steam-dashboard-project`.`steam_warehouse_steam_warehouse`.`releases_by_year_and_tier`
+where release_year is null
+
+
+
+      
+    ) dbt_internal_test
+[0m02:01:37.356893 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-dashboard-project&j=bq:US:0e26f87f-77fe-401a-aa86-5daa324b6d15&page=queryresults
+[0m02:01:37.921560 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-dashboard-project&j=bq:US:45a05066-1b20-4455-8b72-ad504a0ac793&page=queryresults
+[0m02:01:37.932654 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-dashboard-project&j=bq:US:8aabc542-ef42-4e0c-bca7-e74fd4b2b2f5&page=queryresults
+[0m02:01:37.972468 [debug] [Thread-2 (]: Timing info for test.steam_pipeline.not_null_metacritic_by_genre_avg_metacritic_score.4c56331ff3 (execute): 02:01:35.630128 => 02:01:37.972095
+[0m02:01:37.975028 [info ] [Thread-2 (]: 2 of 10 PASS not_null_metacritic_by_genre_avg_metacritic_score ................. [[32mPASS[0m in 2.41s]
+[0m02:01:37.976379 [debug] [Thread-2 (]: Finished running node test.steam_pipeline.not_null_metacritic_by_genre_avg_metacritic_score.4c56331ff3
+[0m02:01:37.977123 [debug] [Thread-2 (]: Began running node test.steam_pipeline.source_not_null_steam_warehouse_raw_games_app_id.5b3be08132
+[0m02:01:37.977785 [info ] [Thread-2 (]: 7 of 10 START test source_not_null_steam_warehouse_raw_games_app_id ............ [RUN]
+[0m02:01:37.978824 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.steam_pipeline.not_null_metacritic_by_genre_avg_metacritic_score.4c56331ff3, now test.steam_pipeline.source_not_null_steam_warehouse_raw_games_app_id.5b3be08132)
+[0m02:01:37.979315 [debug] [Thread-2 (]: Began compiling node test.steam_pipeline.source_not_null_steam_warehouse_raw_games_app_id.5b3be08132
+[0m02:01:37.983931 [debug] [Thread-2 (]: Writing injected SQL for node "test.steam_pipeline.source_not_null_steam_warehouse_raw_games_app_id.5b3be08132"
+[0m02:01:37.984648 [debug] [Thread-2 (]: Timing info for test.steam_pipeline.source_not_null_steam_warehouse_raw_games_app_id.5b3be08132 (compile): 02:01:37.979546 => 02:01:37.984375
+[0m02:01:37.984997 [debug] [Thread-2 (]: Began executing node test.steam_pipeline.source_not_null_steam_warehouse_raw_games_app_id.5b3be08132
+[0m02:01:37.987265 [debug] [Thread-2 (]: Writing runtime sql for node "test.steam_pipeline.source_not_null_steam_warehouse_raw_games_app_id.5b3be08132"
+[0m02:01:37.987901 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:01:37.989287 [debug] [Thread-2 (]: On test.steam_pipeline.source_not_null_steam_warehouse_raw_games_app_id.5b3be08132: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "steam_pipeline", "target_name": "dev", "node_id": "test.steam_pipeline.source_not_null_steam_warehouse_raw_games_app_id.5b3be08132"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select app_id
+from `steam-dashboard-project`.`steam_warehouse`.`raw_games`
+where app_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m02:01:38.378223 [debug] [Thread-1 (]: Timing info for test.steam_pipeline.accepted_values_releases_by_year_and_tier_price_tier__Free__Budget__Mid__Premium.4faed1990e (execute): 02:01:35.612393 => 02:01:38.377868
+[0m02:01:38.379223 [info ] [Thread-1 (]: 1 of 10 PASS accepted_values_releases_by_year_and_tier_price_tier__Free__Budget__Mid__Premium  [[32mPASS[0m in 2.81s]
+[0m02:01:38.380002 [debug] [Thread-1 (]: Finished running node test.steam_pipeline.accepted_values_releases_by_year_and_tier_price_tier__Free__Budget__Mid__Premium.4faed1990e
+[0m02:01:38.380574 [debug] [Thread-1 (]: Began running node test.steam_pipeline.source_not_null_steam_warehouse_raw_games_name.dfc92bb029
+[0m02:01:38.381038 [info ] [Thread-1 (]: 8 of 10 START test source_not_null_steam_warehouse_raw_games_name .............. [RUN]
+[0m02:01:38.381916 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.steam_pipeline.accepted_values_releases_by_year_and_tier_price_tier__Free__Budget__Mid__Premium.4faed1990e, now test.steam_pipeline.source_not_null_steam_warehouse_raw_games_name.dfc92bb029)
+[0m02:01:38.382353 [debug] [Thread-1 (]: Began compiling node test.steam_pipeline.source_not_null_steam_warehouse_raw_games_name.dfc92bb029
+[0m02:01:38.386859 [debug] [Thread-1 (]: Writing injected SQL for node "test.steam_pipeline.source_not_null_steam_warehouse_raw_games_name.dfc92bb029"
+[0m02:01:38.387585 [debug] [Thread-1 (]: Timing info for test.steam_pipeline.source_not_null_steam_warehouse_raw_games_name.dfc92bb029 (compile): 02:01:38.382598 => 02:01:38.387288
+[0m02:01:38.387946 [debug] [Thread-1 (]: Began executing node test.steam_pipeline.source_not_null_steam_warehouse_raw_games_name.dfc92bb029
+[0m02:01:38.390338 [debug] [Thread-1 (]: Writing runtime sql for node "test.steam_pipeline.source_not_null_steam_warehouse_raw_games_name.dfc92bb029"
+[0m02:01:38.390981 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:01:38.392392 [debug] [Thread-1 (]: On test.steam_pipeline.source_not_null_steam_warehouse_raw_games_name.dfc92bb029: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "steam_pipeline", "target_name": "dev", "node_id": "test.steam_pipeline.source_not_null_steam_warehouse_raw_games_name.dfc92bb029"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select name
+from `steam-dashboard-project`.`steam_warehouse`.`raw_games`
+where name is null
+
+
+
+      
+    ) dbt_internal_test
+[0m02:01:38.658933 [debug] [Thread-4 (]: Timing info for test.steam_pipeline.not_null_releases_by_year_and_tier_release_year.54e040d0a3 (execute): 02:01:37.248223 => 02:01:38.658562
+[0m02:01:38.660048 [info ] [Thread-4 (]: 6 of 10 PASS not_null_releases_by_year_and_tier_release_year ................... [[32mPASS[0m in 1.42s]
+[0m02:01:38.661046 [debug] [Thread-4 (]: Finished running node test.steam_pipeline.not_null_releases_by_year_and_tier_release_year.54e040d0a3
+[0m02:01:38.661625 [debug] [Thread-4 (]: Began running node test.steam_pipeline.source_unique_steam_warehouse_raw_games_app_id.40ed3b2933
+[0m02:01:38.662115 [info ] [Thread-4 (]: 9 of 10 START test source_unique_steam_warehouse_raw_games_app_id .............. [RUN]
+[0m02:01:38.663107 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.steam_pipeline.not_null_releases_by_year_and_tier_release_year.54e040d0a3, now test.steam_pipeline.source_unique_steam_warehouse_raw_games_app_id.40ed3b2933)
+[0m02:01:38.663525 [debug] [Thread-4 (]: Began compiling node test.steam_pipeline.source_unique_steam_warehouse_raw_games_app_id.40ed3b2933
+[0m02:01:38.671188 [debug] [Thread-4 (]: Writing injected SQL for node "test.steam_pipeline.source_unique_steam_warehouse_raw_games_app_id.40ed3b2933"
+[0m02:01:38.671966 [debug] [Thread-4 (]: Timing info for test.steam_pipeline.source_unique_steam_warehouse_raw_games_app_id.40ed3b2933 (compile): 02:01:38.663748 => 02:01:38.671670
+[0m02:01:38.672350 [debug] [Thread-4 (]: Began executing node test.steam_pipeline.source_unique_steam_warehouse_raw_games_app_id.40ed3b2933
+[0m02:01:38.674804 [debug] [Thread-4 (]: Writing runtime sql for node "test.steam_pipeline.source_unique_steam_warehouse_raw_games_app_id.40ed3b2933"
+[0m02:01:38.675431 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m02:01:38.676837 [debug] [Thread-4 (]: On test.steam_pipeline.source_unique_steam_warehouse_raw_games_app_id.40ed3b2933: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "steam_pipeline", "target_name": "dev", "node_id": "test.steam_pipeline.source_unique_steam_warehouse_raw_games_app_id.40ed3b2933"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with dbt_test__target as (
+
+  select app_id as unique_field
+  from `steam-dashboard-project`.`steam_warehouse`.`raw_games`
+  where app_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m02:01:38.733421 [debug] [Thread-3 (]: Timing info for test.steam_pipeline.not_null_releases_by_year_and_tier_price_tier.c9237483ff (execute): 02:01:37.195896 => 02:01:38.733102
+[0m02:01:38.734394 [info ] [Thread-3 (]: 5 of 10 PASS not_null_releases_by_year_and_tier_price_tier ..................... [[32mPASS[0m in 1.55s]
+[0m02:01:38.735177 [debug] [Thread-3 (]: Finished running node test.steam_pipeline.not_null_releases_by_year_and_tier_price_tier.c9237483ff
+[0m02:01:38.735890 [debug] [Thread-3 (]: Began running node test.steam_pipeline.unique_metacritic_by_genre_genre.99d894d596
+[0m02:01:38.736370 [info ] [Thread-3 (]: 10 of 10 START test unique_metacritic_by_genre_genre ........................... [RUN]
+[0m02:01:38.737553 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.steam_pipeline.not_null_releases_by_year_and_tier_price_tier.c9237483ff, now test.steam_pipeline.unique_metacritic_by_genre_genre.99d894d596)
+[0m02:01:38.738361 [debug] [Thread-3 (]: Began compiling node test.steam_pipeline.unique_metacritic_by_genre_genre.99d894d596
+[0m02:01:38.742950 [debug] [Thread-3 (]: Writing injected SQL for node "test.steam_pipeline.unique_metacritic_by_genre_genre.99d894d596"
+[0m02:01:38.744751 [debug] [Thread-3 (]: Timing info for test.steam_pipeline.unique_metacritic_by_genre_genre.99d894d596 (compile): 02:01:38.738740 => 02:01:38.744453
+[0m02:01:38.745139 [debug] [Thread-3 (]: Began executing node test.steam_pipeline.unique_metacritic_by_genre_genre.99d894d596
+[0m02:01:38.747593 [debug] [Thread-3 (]: Writing runtime sql for node "test.steam_pipeline.unique_metacritic_by_genre_genre.99d894d596"
+[0m02:01:38.748304 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m02:01:38.749723 [debug] [Thread-3 (]: On test.steam_pipeline.unique_metacritic_by_genre_genre.99d894d596: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "steam_pipeline", "target_name": "dev", "node_id": "test.steam_pipeline.unique_metacritic_by_genre_genre.99d894d596"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with dbt_test__target as (
+
+  select genre as unique_field
+  from `steam-dashboard-project`.`steam_warehouse_steam_warehouse`.`metacritic_by_genre`
+  where genre is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m02:01:38.779048 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-dashboard-project&j=bq:US:d9d25772-0d51-48d7-83d5-2b6885493775&page=queryresults
+[0m02:01:39.146828 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-dashboard-project&j=bq:US:09224416-328e-4817-b737-53ffb092e641&page=queryresults
+[0m02:01:39.481543 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-dashboard-project&j=bq:US:56343228-27cb-4f01-a917-7e4886732062&page=queryresults
+[0m02:01:39.602781 [debug] [Thread-2 (]: Timing info for test.steam_pipeline.source_not_null_steam_warehouse_raw_games_app_id.5b3be08132 (execute): 02:01:37.985193 => 02:01:39.602386
+[0m02:01:39.603807 [info ] [Thread-2 (]: 7 of 10 PASS source_not_null_steam_warehouse_raw_games_app_id .................. [[32mPASS[0m in 1.63s]
+[0m02:01:39.604635 [debug] [Thread-2 (]: Finished running node test.steam_pipeline.source_not_null_steam_warehouse_raw_games_app_id.5b3be08132
+[0m02:01:39.744188 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=steam-dashboard-project&j=bq:US:85a2321e-2f55-4089-a960-0e58fec860cc&page=queryresults
+[0m02:01:39.856361 [debug] [Thread-1 (]: Timing info for test.steam_pipeline.source_not_null_steam_warehouse_raw_games_name.dfc92bb029 (execute): 02:01:38.388145 => 02:01:39.856045
+[0m02:01:39.857353 [info ] [Thread-1 (]: 8 of 10 PASS source_not_null_steam_warehouse_raw_games_name .................... [[32mPASS[0m in 1.48s]
+[0m02:01:39.858185 [debug] [Thread-1 (]: Finished running node test.steam_pipeline.source_not_null_steam_warehouse_raw_games_name.dfc92bb029
+[0m02:01:40.278375 [debug] [Thread-3 (]: Timing info for test.steam_pipeline.unique_metacritic_by_genre_genre.99d894d596 (execute): 02:01:38.745349 => 02:01:40.278016
+[0m02:01:40.279381 [info ] [Thread-3 (]: 10 of 10 PASS unique_metacritic_by_genre_genre ................................. [[32mPASS[0m in 1.54s]
+[0m02:01:40.280140 [debug] [Thread-3 (]: Finished running node test.steam_pipeline.unique_metacritic_by_genre_genre.99d894d596
+[0m02:01:40.510666 [debug] [Thread-4 (]: Timing info for test.steam_pipeline.source_unique_steam_warehouse_raw_games_app_id.40ed3b2933 (execute): 02:01:38.672586 => 02:01:40.510237
+[0m02:01:40.511710 [info ] [Thread-4 (]: 9 of 10 PASS source_unique_steam_warehouse_raw_games_app_id .................... [[32mPASS[0m in 1.85s]
+[0m02:01:40.512710 [debug] [Thread-4 (]: Finished running node test.steam_pipeline.source_unique_steam_warehouse_raw_games_app_id.40ed3b2933
+[0m02:01:40.514445 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m02:01:40.514776 [debug] [MainThread]: Connection 'test.steam_pipeline.source_not_null_steam_warehouse_raw_games_name.dfc92bb029' was properly closed.
+[0m02:01:40.515053 [debug] [MainThread]: Connection 'test.steam_pipeline.source_not_null_steam_warehouse_raw_games_app_id.5b3be08132' was properly closed.
+[0m02:01:40.515320 [debug] [MainThread]: Connection 'test.steam_pipeline.unique_metacritic_by_genre_genre.99d894d596' was properly closed.
+[0m02:01:40.515597 [debug] [MainThread]: Connection 'test.steam_pipeline.source_unique_steam_warehouse_raw_games_app_id.40ed3b2933' was properly closed.
+[0m02:01:40.515916 [info ] [MainThread]: 
+[0m02:01:40.516267 [info ] [MainThread]: Finished running 10 tests in 0 hours 0 minutes and 5.30 seconds (5.30s).
+[0m02:01:40.518410 [debug] [MainThread]: Command end result
+[0m02:01:40.533191 [info ] [MainThread]: 
+[0m02:01:40.533712 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m02:01:40.534213 [info ] [MainThread]: 
+[0m02:01:40.534702 [info ] [MainThread]: Done. PASS=10 WARN=0 ERROR=0 SKIP=0 TOTAL=10
+[0m02:01:40.536831 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 5.9719415, "process_user_time": 3.267841, "process_kernel_time": 0.233274, "process_mem_max_rss": "145596", "process_in_blocks": "17088", "process_out_blocks": "2864"}
+[0m02:01:40.537362 [debug] [MainThread]: Command `dbt test` succeeded at 02:01:40.537240 after 5.97 seconds
+[0m02:01:40.537736 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7db9c0d591e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7db9bea35960>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7db9bcda0a90>]}
+[0m02:01:40.538097 [debug] [MainThread]: Flushing usage events

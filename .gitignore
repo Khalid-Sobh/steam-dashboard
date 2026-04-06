@@ -2,6 +2,7 @@ keys/
 .env
 data/
 airflow/logs/
+dbt/logs/
 __pycache__/
 *.pyc
 *.pyo
@@ -13,3 +14,5 @@ target/
 dbt_packages/
 *.egg-info/
 .DS_Store
+**/logs/
+*.log

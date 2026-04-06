@@ -8,7 +8,7 @@ End-to-end data engineering project using the [Steam Games Dataset](https://www.
 
 ## Architecture
 
-```
+<!-- ```
 Your machine (Docker)
 ┌──────────────────────────────────┐
 │  Airflow  ──── orchestrates ───► │──► Dataproc Serverless (Spark)
@@ -37,7 +37,8 @@ GCP
 │                                                         │
 │         Looker Studio Dashboard                         │
 └─────────────────────────────────────────────────────────┘
-```
+``` -->
+![Project Logo](docs/SteamGamesDataPipeline.drawio.png)
 
 **Nothing is processed locally.** Your machine only runs Airflow (scheduler) and dbt (SQL sender). All data movement and compute happens on GCP.
 
@@ -209,7 +210,7 @@ Toggle **both** DAGs ON (so DAG 2 is enabled and can accept triggers), then leav
 **Tile 2 — Games released per year by price tier**
 - Table: `releases_by_year_and_tier`
 - Insert → **Stacked bar chart**
-- Dimension: `release_year`
+- Dimension: `release_date`
 - Breakdown dimension: `price_tier`
 - Metric: `game_count`
 
