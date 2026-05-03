@@ -24,3 +24,4 @@ RUN pip install --no-cache-dir \
     google-cloud-storage==2.16.0 \
     google-cloud-bigquery==3.20.0 \
     cryptography==41.0.7
+

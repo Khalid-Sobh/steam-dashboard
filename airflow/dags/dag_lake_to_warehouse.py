@@ -4,9 +4,10 @@ DAG 2 — Steam: lake to warehouse
 Schedule : triggered automatically by DAG 1 (no independent schedule)
            Can also be triggered manually from the Airflow UI.
 What it does:
-  1. Loads Parquet files from GCS/processed/steam/ into BigQuery raw_games table
-  2. Runs dbt inside its own container via DockerOperator to create
-     staging view + two mart tables used by the dashboard
+  1. Loads Parquet from GCS processed zone into BigQuery raw_games
+     (partitioned by release_date, clustered by price_tier and release_year)
+  2. Runs dbt to create staging view + two mart tables
+  3. Runs dbt tests
 """
 
 from __future__ import annotations
@@ -77,6 +78,12 @@ with DAG(
         source_format="PARQUET",
         write_disposition="WRITE_TRUNCATE",
         autodetect=True,
+        # partitioned by release_date (DAY granularity), clustered by price_tier and release_year
+        time_partitioning={
+            "type": "DAY",
+            "field": "release_date",
+        },
+        cluster_fields=["price_tier", "release_year"],
         gcp_conn_id="google_cloud_default",
     )
 

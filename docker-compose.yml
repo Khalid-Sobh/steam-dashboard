@@ -100,7 +100,11 @@ services:
     command: scheduler
     restart: always
 
-  # dbt runner — stays alive, DAG execs into it
+  # dbt image kept available locally so DockerOperator can launch it
+  # without pulling from the registry on every run.
+  # The DAG does NOT exec into this container — it uses DockerOperator
+  # to spin up a fresh ephemeral dbt container per task, bind-mounting
+  # the dbt/ and keys/ folders from the host via HOST_WORKDIR.
   dbt:
     image: ghcr.io/dbt-labs/dbt-bigquery:1.7.0
     container_name: steam-dbt

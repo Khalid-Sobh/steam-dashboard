@@ -1,8 +1,19 @@
 -- Dashboard Tile 2: Number of games released per year, broken down by price tier
 -- Used for a stacked bar chart in Looker Studio.
 -- Price tiers: Free / Budget (<$10) / Mid ($10–$29) / Premium ($30+)
+-- Partitioned by release_date, clustered by price_tier
 
-{{ config(materialized='table') }}
+{{
+    config(
+        materialized='table',
+        partition_by={
+            'field': 'release_date',
+            'data_type': 'date',
+            'granularity': 'year'
+        },
+        cluster_by=['price_tier']
+    )
+}}
 
 select
     release_year,
@@ -19,6 +30,7 @@ where
 
 group by
     release_year,
+    release_date,
     price_tier
 
 order by

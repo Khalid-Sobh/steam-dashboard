@@ -2,8 +2,14 @@
 -- Explodes the genres array so each game-genre pair becomes a row,
 -- then aggregates. Only genres with ≥20 rated games are included
 -- to avoid small-sample noise.
+-- Clustered by genre for fast filtering in Looker Studio
 
-{{ config(materialized='table') }}
+{{
+    config(
+        materialized='table',
+        cluster_by=['genre']
+    )
+}}
 
 with exploded as (
 
